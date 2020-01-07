@@ -19,7 +19,7 @@ function beginRound(e){
 function incrementScore(roundResult){
     if (roundResult === 1)
         playerScore += 1;
-    else    
+    else if (roundResult === 2)   
         computerScore += 1;
 }
 
@@ -94,6 +94,7 @@ function htmlRound(roundResult, playerSelection, computerSelection)
 
 function htmlGameEnd(){
         removeAllChildren(game);
+        game.classList.remove('grid-container');
         var h1 = document.createElement('h1');
         h1.setAttribute('class', 'gameover');
         if (playerScore > computerScore)
