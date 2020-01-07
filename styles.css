@@ -1,0 +1,57 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    background-color: black;
+    grid-gap: 0px;
+    padding: 10px;
+    
+    }
+
+.grid-container > div {
+    background-color: rgba(255, 255,255,0.8);
+    text-align: center;
+    padding: 20px, 0;
+    font-size: 30px;
+}
+
+#pc-choice{
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#npc-choice{
+    grid-column-start:3;
+    grid-column-end:4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#pc-score{
+    grid-column-start:1;
+    grid-column-end: 2;
+    grid-row-start:2;
+    grid-row-end: 3;
+}
+#npc-score{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start:2;
+    grid-row-end:3;
+}
+#buttons{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.img-size {
+    height: 300px;
+    width: 300px;
+}
+
+input {
+    height:80px;
+    width:80px; 
+    }
