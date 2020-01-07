@@ -95,14 +95,23 @@ function htmlRound(roundResult, playerSelection, computerSelection)
 function htmlGameEnd(){
         removeAllChildren(game);
         game.classList.remove('grid-container');
-        var h1 = document.createElement('h1');
-        h1.setAttribute('class', 'gameover');
+        const div = document.createElement('div');
+        div.setAttribute('class', 'gameover');
+        game.appendChild(div);
+        const h1 = document.createElement('h1');
+        h1.setAttribute('style','text-align:center');
+        
         if (playerScore > computerScore)
             h1.textContent = "You Win!";
         else
             h1.textContent = "Computer Wins.";
-        game.appendChild(h1);
-
+        div.appendChild(h1);
+        const p1 = document.createElement('p');
+        const p2 = document.createElement('p');
+        p1.textContent = `Your Score: ${playerScore}`;
+        p2.textContent = `Computer Score: ${computerScore}`;
+        div.appendChild(p1);
+        div.appendChild(p2); 
         var button = document.createElement('button');
         button.textContent = "Play Again.";
         button.setAttribute('onclick', "window.location.href = './index.html';");
